@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBrief - Smart News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Particles -->
+    <script src="script.js" defer></script>
+
+    <!-- Content -->
+    <div class="container">
+        <h1>🌐 ByteBrief 🌐</h1>
+        <p>Your AI-powered news companion, delivering concise, insightful, and personalized news summaries.</p>
+
+        <div class="highlights">
+            🔹 AI-Curated Summaries – Get the essence of news. <br>
+            🔹 Personalized Feeds – Follow topics that matter. <br>
+            🔹 Real-Time Updates – Stay informed instantly.
+        </div>
+
+        <p>💡 <strong>Read Less, Know More – Join ByteBrief Today!</strong></p>
+
+        <a href="https://www.indiatvnews.com/" target="_blank" class="btn">Explore News</a>
+    </div>
+
+</body>
+
+</html>

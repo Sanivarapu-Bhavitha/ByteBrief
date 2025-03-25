@@ -1,0 +1,148 @@
+/* Styling */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: url('https://img.freepik.com/free-photo/top-view-autumn-leaves-with-coffee_23-2148198579.jpg?t=st=1742888734~exp=1742892334~hmac=aa7e40e0fea94ddc4b0b765f07b43c43d7dabc7952b98ca08ea081fdb39e1264&w=1380') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 50px;
+    color: #ff9800;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f1f1f1;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.highlights {
+    margin: 30px 0;
+    font-size: 20px;
+    color: #00e676;
+    opacity: 0;
+    animation: slideUp 1.2s 0.5s forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 20px;
+    color: #fff;
+    background: #ff416c;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #ff4b2b;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 75, 43, 0.8);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Floating particles */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-50px) translateX(30px);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
