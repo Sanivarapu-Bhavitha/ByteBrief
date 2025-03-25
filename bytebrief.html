@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBrief - Smart News</title>
+    <style>
+        /* Styling */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            background: url('https://img.freepik.com/free-photo/top-view-autumn-leaves-with-coffee_23-2148198579.jpg?t=st=1742888734~exp=1742892334~hmac=aa7e40e0fea94ddc4b0b765f07b43c43d7dabc7952b98ca08ea081fdb39e1264&w=1380') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+            animation: slideIn 1s ease-in-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #ff9800;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f1f1f1;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .highlights {
+            margin: 30px 0;
+            font-size: 20px;
+            color: #00e676;
+            opacity: 0;
+            animation: slideUp 1.2s 0.5s forwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 20px;
+            color: #fff;
+            background: #ff416c;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff4b2b;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 75, 43, 0.8);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: float 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-50px) translateX(30px);
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Particles -->
+    <script>
+        for (let i = 0; i < 25; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.width = ${Math.random() * 12 + 8}px;
+            particle.style.height = particle.style.width;
+            particle.style.left = ${Math.random() * 100}vw;
+            particle.style.top = ${Math.random() * 100}vh;
+            particle.style.animationDuration = ${Math.random() * 6 + 4}s;
+            particle.style.animationDelay = ${Math.random() * 5}s;
+            document.body.appendChild(particle);
+        }
+    </script>
+
+    <!-- Content -->
+    <div class="container">
+        <h1>🌐 ByteBrief 🌐</h1>
+        <p>Your AI-powered news companion, delivering concise, insightful, and personalized news summaries.</p>
+
+        <div class="highlights">
+            🔹 AI-Curated Summaries – Get the essence of news. <br>
+            🔹 Personalized Feeds – Follow topics that matter. <br>
+            🔹 Real-Time Updates – Stay informed instantly.
+        </div>
+
+        <p>💡 <strong>Read Less, Know More – Join ByteBrief Today!</strong></p>
+
+        <a href="https://www.indiatvnews.com/" target="_blank" class="btn">Explore News</a>
+    </div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en-US" class="s-light site-s-light">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v24.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>News: Today’s News Headlines, Breaking News India, wwe News and Cricket News | headlinespost</title><link rel="preload" as="image" imagesrcset="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818882/aa-34_41390df1d/aa-34_41390df1d.avif?_i=AA" imagesizes="(max-width: 605px) 100vw, 605px" /><link rel="preload" as="font" href="https://www.headlinespost.in/wp-content/themes/smart-mag/css/icons/fonts/ts-icons.woff2?v3.1" type="font/woff2" crossorigin="anonymous" />
+	<meta name="description" content="News Headlinespost Today: Check out the latest and most reliable updates in politics, sports, entertainment, and business, featuring breaking national and international news, only on Headlinespost" />
+	<link rel="canonical" href="https://www.headlinespost.in/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="News: Today’s News Headlines, Breaking News India, wwe News and Cricket News | headlinespost" />
+	<meta property="og:description" content="News Headlinespost Today: Check out the latest and most reliable updates in politics, sports, entertainment, and business, featuring breaking national and international news, only on Headlinespost" />
+	<meta property="og:url" content="https://www.headlinespost.in/" />
+	<meta property="og:site_name" content="Headlines Post" />
+	<meta property="article:modified_time" content="2024-12-16T12:17:52+00:00" />
+	<meta property="og:image" content="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1727590409/imgpsh_fullsize_anim/imgpsh_fullsize_anim.png?_i=AA" />
+	<meta property="og:image:width" content="560" />
+	<meta property="og:image:height" content="300" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.headlinespost.in/","url":"https://www.headlinespost.in/","name":"News: Today’s News Headlines, Breaking News India, wwe News and Cricket News | headlinespost","isPartOf":{"@id":"https://www.headlinespost.in/#website"},"primaryImageOfPage":{"@id":"https://www.headlinespost.in/#primaryimage"},"image":{"@id":"https://www.headlinespost.in/#primaryimage"},"thumbnailUrl":"https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1727590409/imgpsh_fullsize_anim/imgpsh_fullsize_anim.png?_i=AA","datePublished":"2024-09-29T11:30:31+00:00","dateModified":"2024-12-16T12:17:52+00:00","description":"News Headlinespost Today: Check out the latest and most reliable updates in politics, sports, entertainment, and business, featuring breaking national and international news, only on Headlinespost","breadcrumb":{"@id":"https://www.headlinespost.in/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.headlinespost.in/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.headlinespost.in/#primaryimage","url":"https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1727590409/imgpsh_fullsize_anim/imgpsh_fullsize_anim.png?_i=AA","contentUrl":"https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1727590409/imgpsh_fullsize_anim/imgpsh_fullsize_anim.png?_i=AA","width":560,"height":300,"caption":"headlinespost"},{"@type":"BreadcrumbList","@id":"https://www.headlinespost.in/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.headlinespost.in/#website","url":"https://www.headlinespost.in/","name":"Headlines Post","description":"My WordPress Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.headlinespost.in/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//res.cloudinary.com' />
+<link rel='preconnect' href='https://res.cloudinary.com' />
+<link rel="alternate" type="application/rss+xml" title="Headlines Post &raquo; Feed" href="https://www.headlinespost.in/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Headlines Post &raquo; Comments Feed" href="https://www.headlinespost.in/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.headlinespost.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<!-- www.headlinespost.in is managing ads with Advanced Ads 2.0.5 – https://wpadvancedads.com/ --><script id="headl-ready">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+		<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.headlinespost.in/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.headlinespost.in/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.28.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-10-css' href='https://www.headlinespost.in/wp-content/uploads/elementor/css/post-10.css?ver=1739441992' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-77-css' href='https://www.headlinespost.in/wp-content/uploads/elementor/css/post-77.css?ver=1739441994' type='text/css' media='all' />
+<link rel='stylesheet' id='smartmag-core-css' href='https://www.headlinespost.in/wp-content/themes/smart-mag/style.css?ver=10.2.1' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='smartmag-fonts-css' href='https://fonts.googleapis.com/css?family=Hind%3A400%2C500%2C600&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='smartmag-magnific-popup-css' href='https://www.headlinespost.in/wp-content/themes/smart-mag/css/lightbox.css?ver=10.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='smartmag-icons-css' href='https://www.headlinespost.in/wp-content/themes/smart-mag/css/icons/icons.css?ver=10.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='smartmag-skin-css' href='https://www.headlinespost.in/wp-content/themes/smart-mag/css/skin-trendy.css?ver=10.2.1' type='text/css' media='all' />
+<style id='smartmag-skin-inline-css' type='text/css'>
+:root { --c-main: #3c3fde;
+--c-main-rgb: 60,63,222;
+--text-font: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--body-font: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--ui-font: "Outfit", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--title-font: "Outfit", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--h-font: "Outfit", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--title-font: var(--ui-font);
+--h-font: var(--ui-font);
+--text-h-font: var(--h-font);
+--title-font: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+--title-size-xs: 15px;
+--title-size-m: 19px;
+--main-width: 1240px;
+--p-title-space: 11px;
+--c-excerpts: #474747;
+--excerpt-size: 14px; }
+.s-dark body { background-color: #101016; }
+.post-title:not(._) { line-height: 1.4; }
+:root { --wrap-padding: 35px; }
+:root { --sidebar-width: 336px; }
+.ts-row, .has-el-gap { --sidebar-c-width: calc(var(--sidebar-width) + var(--grid-gutter-h) + var(--sidebar-c-pad)); }
+.smart-head-main { --c-shadow: rgba(0,0,0,0.02); }
+.smart-head-main .smart-head-top { --head-h: 42px; border-image: linear-gradient(90deg, #e40666 0%, #3c3fde 100%); border-image-slice: 1; border-image-width: 3px 0 0 0; border-width: 3px 0; border-image-width: 0 0 3px 0; }
+.smart-head-main .smart-head-mid { --head-h: 70px; border-bottom-width: 1px; border-bottom-color: #efefef; }
+.s-dark .smart-head-main .smart-head-mid,
+.smart-head-main .s-dark.smart-head-mid { border-bottom-color: #3f3f3f; }
+.navigation { font-family: var(--body-font); }
+.navigation-main .menu > li > a { font-size: 15.4px; font-weight: bold; letter-spacing: 0.01em; }
+.navigation-main { --nav-items-space: 15px; }
+.s-light .navigation { --c-nav-blip: var(--c-main); }
+.smart-head-mobile .smart-head-mid { border-image: linear-gradient(90deg, #e40666 0%, #3c3fde 100%); border-image-slice: 1; border-image-width: 3px 0 0 0; border-width: 3px 0; }
+.navigation-small { margin-left: calc(-1 * var(--nav-items-space)); }
+.s-dark .navigation-small { --c-nav-hov: rgba(255,255,255,0.76); }
+.s-dark .smart-head-main .spc-social,
+.smart-head-main .s-dark .spc-social { --c-spc-social: #ffffff; --c-spc-social-hov: rgba(255,255,255,0.92); }
+.smart-head-main .spc-social { --spc-social-fs: 13px; --spc-social-size: 26px; --spc-social-space: 5px; }
+.s-dark .smart-head-main .search-icon:hover,
+.smart-head-main .s-dark .search-icon:hover { color: #bcbcbc; }
+.smart-head-main { --search-icon-size: 18px; }
+.smart-head-main .search-icon { --item-mr: 7px; }
+.smart-head-mobile { --search-icon-size: 18px; }
+.s-dark .smart-head-main .offcanvas-toggle:hover,
+.smart-head-main .s-dark .offcanvas-toggle:hover { --c-hamburger: #bcbcbc; }
+.smart-head-mobile .offcanvas-toggle { transform: scale(.8); }
+.smart-head .ts-button1 { font-size: 12px; border-radius: 6px; height: 34px; line-height: 34px; padding-left: 14px; padding-right: 14px; }
+.post-meta .text-in, .post-meta .post-cat > a { font-size: 11px; }
+.post-meta .post-cat > a { font-weight: 600; }
+.post-meta { --p-meta-sep: "\25c6"; --p-meta-sep-pad: 7px; }
+.post-meta .meta-item:before { transform: scale(.65); }
+.l-post { --media-radius: 10px; }
+.cat-labels .category { font-weight: 600; letter-spacing: 0.06em; border-radius: 5px; padding-top: 2px; padding-bottom: 2px; padding-left: 10px; padding-right: 10px; }
+.block-head-c .heading { font-size: 19px; text-transform: initial; }
+.block-head-e3 .heading { font-size: 22px; }
+.load-button { padding-top: 13px; padding-bottom: 13px; padding-left: 13px; padding-right: 13px; border-radius: 20px; }
+.loop-grid-base .media { margin-bottom: 20px; }
+.loop-grid .l-post { border-radius: 10px; overflow: hidden; }
+.has-nums .l-post { --num-font: "Outfit", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+.has-nums-a .l-post .post-title:before,
+.has-nums-b .l-post .content:before { font-weight: 500; }
+.has-nums-c .l-post .post-title:before,
+.has-nums-c .l-post .content:before { font-size: 18px; }
+.loop-list-card .l-post { border-radius: 10px; overflow: hidden; }
+.loop-small .ratio-is-custom { padding-bottom: calc(100% / 1.3); }
+.loop-small .media { width: 30%; max-width: 50%; }
+.loop-small .media:not(i) { max-width: 97px; }
+.single-featured .featured, .the-post-header .featured { border-radius: 10px; --media-radius: 10px; overflow: hidden; }
+.post-meta-single .meta-item, .post-meta-single .text-in { font-size: 13px; }
+.the-post-header .post-meta .post-title { font-family: var(--body-font); font-weight: 800; line-height: 1.3; letter-spacing: -0.01em; }
+.entry-content { letter-spacing: -0.005em; }
+.site-s-light .entry-content { color: #0a0a0a; }
+:where(.entry-content) a { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.review-box .overall { border-radius: 8px; }
+.review-box .rating-bar, .review-box .bar { height: 18px; border-radius: 8px; }
+.review-box .label { font-size: 15px; }
+.s-head-large .sub-title { font-size: 19px; }
+.s-post-large .post-content-wrap { display: grid; grid-template-columns: minmax(0, 1fr); }
+.s-post-large .entry-content { max-width: min(100%, calc(750px + var(--p-spacious-pad)*2)); justify-self: center; }
+.category .feat-grid { --grid-gap: 10px; }
+.spc-newsletter { --box-roundness: 10px; }
+@media (min-width: 1200px) { .breadcrumbs { font-size: 13px; }
+.nav-hov-b .menu > li > a:before { width: calc(100% - (var(--nav-items-space, 15px)*2)); left: var(--nav-items-space); }
+.post-content h2 { font-size: 27px; }
+.post-content h3 { font-size: 23px; } }
+@media (min-width: 941px) and (max-width: 1200px) { :root { --sidebar-width: 300px; }
+.ts-row, .has-el-gap { --sidebar-c-width: calc(var(--sidebar-width) + var(--grid-gutter-h) + var(--sidebar-c-pad)); }
+.navigation-main .menu > li > a { font-size: calc(10px + (15.4px - 10px) * .7); } }
+@media (min-width: 768px) and (max-width: 940px) { .ts-contain, .main { padding-left: 35px; padding-right: 35px; }
+.layout-boxed-inner { --wrap-padding: 35px; }
+:root { --wrap-padding: 35px; } }
+@media (max-width: 767px) { .ts-contain, .main { padding-left: 25px; padding-right: 25px; }
+.layout-boxed-inner { --wrap-padding: 25px; }
+:root { --wrap-padding: 25px; }
+.block-head-e3 .heading { font-size: 18px; } }
+@media (min-width: 940px) and (max-width: 1300px) { :root { --wrap-padding: min(35px, 5vw); } }
+
+
+</style>
+<link crossorigin="anonymous" rel='stylesheet' id='smartmag-gfonts-custom-css' href='https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600%2C700%2C800%7COutfit%3A400%2C500%2C600%2C700&#038;display=swap' type='text/css' media='all' />
+<script type="text/javascript">
+/* <![CDATA[ */
+var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"auto","image_quality":"auto","image_freeform":"","svg_support":"off","crop_sizes":"","image_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","video_delivery":"on","video_player":"wp","adaptive_streaming":"off","adaptive_streaming_mode":"mpd","video_controls":"on","video_loop":"off","video_autoplay_mode":"off","video_optimization":"on","video_format":"auto","video_quality":"auto","video_freeform":"","video_preview":"","use_lazy_load":"on","lazy_threshold":"100px","lazy_custom_color":"rgba(153,153,153,0.5)","lazy_animate":"on","lazy_placeholder":"blur","dpr":"2X","lazyload_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","enable_breakpoints":"on","pixel_step":200,"breakpoints":"","max_width":2048,"min_width":200,"breakpoints_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","placeholder":"e_blur:2000,q_1,f_auto","base_url":"https:\/\/res.cloudinary.com\/dn7ncavw3"};!function(){const e={deviceDensity:window.devicePixelRatio?window.devicePixelRatio:"auto",density:null,config:CLDLB||{},lazyThreshold:0,enabled:!1,sizeBands:[],iObserver:null,pObserver:null,rObserver:null,aboveFold:!0,minPlaceholderThreshold:500,bind(e){e.CLDbound=!0,this.enabled||this._init();const t=e.dataset.size.split(" ");e.originalWidth=t[0],e.originalHeight=t[1],this.pObserver?(this.aboveFold&&this.inInitialView(e)?this.buildImage(e):(this.pObserver.observe(e),this.iObserver.observe(e)),e.addEventListener("error",(t=>{e.srcset="",e.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="rgba(0,0,0,0.1)"/><text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">%26%23x26A0%3B︎</text></svg>',this.rObserver.unobserve(e)}))):this.setupFallback(e)},buildImage(e){e.dataset.srcset?(e.cld_loaded=!0,e.srcset=e.dataset.srcset):(e.src=this.getSizeURL(e),e.dataset.responsive&&this.rObserver.observe(e))},inInitialView(e){const t=e.getBoundingClientRect();return this.aboveFold=t.top<window.innerHeight+this.lazyThreshold,this.aboveFold},setupFallback(e){const t=[];this.sizeBands.forEach((i=>{if(i<=e.originalWidth){let s=this.getSizeURL(e,i,!0)+` ${i}w`;-1===t.indexOf(s)&&t.push(s)}})),e.srcset=t.join(","),e.sizes=`(max-width: ${e.originalWidth}px) 100vw, ${e.originalWidth}px`},_init(){this.enabled=!0,this._calcThreshold(),this._getDensity();let e=parseInt(this.config.max_width);const t=parseInt(this.config.min_width),i=parseInt(this.config.pixel_step);for(;e-i>=t;)e-=i,this.sizeBands.push(e);"undefined"!=typeof IntersectionObserver&&this._setupObservers(),this.enabled=!0},_setupObservers(){const e={rootMargin:this.lazyThreshold+"px 0px "+this.lazyThreshold+"px 0px"},t=this.minPlaceholderThreshold<2*this.lazyThreshold?2*this.lazyThreshold:this.minPlaceholderThreshold,i={rootMargin:t+"px 0px "+t+"px 0px"};this.rObserver=new ResizeObserver(((e,t)=>{e.forEach((e=>{e.target.cld_loaded&&e.contentRect.width>=e.target.cld_loaded&&(e.target.src=this.getSizeURL(e.target))}))})),this.iObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(this.buildImage(e.target),t.unobserve(e.target),this.pObserver.unobserve(e.target))}))}),e),this.pObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(e.target.src=this.getPlaceholderURL(e.target),t.unobserve(e.target))}))}),i)},_calcThreshold(){const e=this.config.lazy_threshold.replace(/[^0-9]/g,"");let t=0;switch(this.config.lazy_threshold.replace(/[0-9]/g,"").toLowerCase()){case"em":t=parseFloat(getComputedStyle(document.body).fontSize)*e;break;case"rem":t=parseFloat(getComputedStyle(document.documentElement).fontSize)*e;break;case"vh":t=window.innerHeight/e*100;break;default:t=e}this.lazyThreshold=parseInt(t,10)},_getDensity(){let e=this.config.dpr?this.config.dpr.replace("X",""):"off";if("off"===e)return this.density=1,1;let t=this.deviceDensity;"max"!==e&&"auto"!==t&&(e=parseFloat(e),t=t>Math.ceil(e)?e:t),this.density=t},scaleWidth(e,t,i){const s=parseInt(this.config.max_width),r=Math.round(s/i);if(!t){t=e.width;let a=Math.round(t/i);for(;-1===this.sizeBands.indexOf(t)&&a<r&&t<s;)t++,a=Math.round(t/i)}return t>s&&(t=s),e.originalWidth<t&&(t=e.originalWidth),t},scaleSize(e,t,i){const s=e.dataset.crop?parseFloat(e.dataset.crop):(e.originalWidth/e.originalHeight).toFixed(2),r=this.scaleWidth(e,t,s),a=Math.round(r/s),o=[];return e.dataset.transformationCrop?o.push(e.dataset.transformationCrop):e.dataset.crop||(o.push(e.dataset.crop?"c_fill":"c_scale"),e.dataset.crop&&o.push("g_auto")),o.push("w_"+r),o.push("h_"+a),i&&1!==this.density&&o.push("dpr_"+this.density),e.cld_loaded=r,{transformation:o.join(","),nameExtension:r+"x"+a}},getDeliveryMethod:e=>e.dataset.seo&&"upload"===e.dataset.delivery?"images":"image/"+e.dataset.delivery,getSizeURL(e,t){const i=this.scaleSize(e,t,!0);return[this.config.base_url,this.getDeliveryMethod(e),"upload"===e.dataset.delivery?i.transformation:"",e.dataset.transformations,"v"+e.dataset.version,e.dataset.publicId+"?_i=AA"].filter(this.empty).join("/")},getPlaceholderURL(e){e.cld_placehold=!0;const t=this.scaleSize(e,null,!1);return[this.config.base_url,this.getDeliveryMethod(e),t.transformation,this.config.placeholder,e.dataset.publicId].filter(this.empty).join("/")},empty:e=>void 0!==e&&0!==e.length};window.CLDBind=t=>{t.CLDbound||e.bind(t)},window.initFallback=()=>{[...document.querySelectorAll('img[data-cloudinary="lazy"]')].forEach((e=>{CLDBind(e)}))},window.addEventListener("load",(()=>{initFallback()})),document.querySelector('script[src*="?cloudinary_lazy_load_loader"]')&&initFallback()}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="smartmag-lazy-inline-js-after">
+/* <![CDATA[ */
+/**
+ * @copyright ThemeSphere
+ * @preserve
+ */
+var BunyadLazy={};BunyadLazy.load=function(){function a(e,n){var t={};e.dataset.bgset&&e.dataset.sizes?(t.sizes=e.dataset.sizes,t.srcset=e.dataset.bgset):t.src=e.dataset.bgsrc,function(t){var a=t.dataset.ratio;if(0<a){const e=t.parentElement;if(e.classList.contains("media-ratio")){const n=e.style;n.getPropertyValue("--a-ratio")||(n.paddingBottom=100/a+"%")}}}(e);var a,o=document.createElement("img");for(a in o.onload=function(){var t="url('"+(o.currentSrc||o.src)+"')",a=e.style;a.backgroundImage!==t&&requestAnimationFrame(()=>{a.backgroundImage=t,n&&n()}),o.onload=null,o.onerror=null,o=null},o.onerror=o.onload,t)o.setAttribute(a,t[a]);o&&o.complete&&0<o.naturalWidth&&o.onload&&o.onload()}function e(t){t.dataset.loaded||a(t,()=>{document.dispatchEvent(new Event("lazyloaded")),t.dataset.loaded=1})}function n(t){"complete"===document.readyState?t():window.addEventListener("load",t)}return{initEarly:function(){var t,a=()=>{document.querySelectorAll(".img.bg-cover:not(.lazyload)").forEach(e)};"complete"!==document.readyState?(t=setInterval(a,150),n(()=>{a(),clearInterval(t)})):a()},callOnLoad:n,initBgImages:function(t){t&&n(()=>{document.querySelectorAll(".img.bg-cover").forEach(e)})},bgLoad:a}}(),BunyadLazy.load.initEarly();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/plugins/sphere-post-views/assets/js/post-views.js?ver=1.0.1" id="sphere-post-views-js"></script>
+<script type="text/javascript" id="sphere-post-views-js-after">
+/* <![CDATA[ */
+var Sphere_PostViews = {"ajaxUrl":"https:\/\/www.headlinespost.in\/wp-admin\/admin-ajax.php?sphere_post_views=1","sampling":0,"samplingRate":10,"repeatCountDelay":0,"postID":false,"token":"d8860fe887"}
+/* ]]> */
+</script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-TX5X579W" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.headlinespost.in"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TX5X579W");
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.headlinespost.in/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.headlinespost.in/wp-json/wp/v2/pages/77" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.headlinespost.in/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+<link rel='shortlink' href='https://www.headlinespost.in/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.headlinespost.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.headlinespost.in%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.headlinespost.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.headlinespost.in%2F&#038;format=xml" />
+<!-- start Simple Custom CSS and JS -->
+<script type="text/javascript">
+jQuery(".wp-block-image").each(function() {
+
+    var imageurl = jQuery(this).find("img").attr("src");
+    var download_html = `<div class="download-link">
+                            <a href="javascript:void(0);" id="download_nopurchased" class="click_download icon-download" data-href="${imageurl}"  download="${imageurl}" data-url="${imageurl}"><i class="fas fa-download"></i> Download</a>
+                        </div>`;
+    jQuery(this).append(download_html);
+});
+
+jQuery(".click_download").click(function() {
+    var file = jQuery(this).data("url");
+    var file_name = getFileName(file);
+    forceDownload(file, file_name);
+});
+
+function getFileName(str) {
+    return str.substring(str.lastIndexOf('/') + 1)
+}
+function forceDownload(url, fileName) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.responseType = "blob";
+    xhr.onload = function() {
+        var urlCreator = window.URL || window.webkitURL;
+        var imageUrl = urlCreator.createObjectURL(this.response);
+        var tag = document.createElement('a');
+        tag.href = imageUrl;
+        tag.download = fileName;
+        document.body.appendChild(tag);
+        tag.click();
+        document.body.removeChild(tag);
+    }
+    xhr.send();
+}</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+//<![CDATA[
+
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('C w=12;(W(1N,1X){C S=12,1m=1N();2h(!![]){2i{C 1U=V(S(2j))/2k+-V(S(2l))/1F+V(S(2m))/2g*(-V(S(2n))/1M)+V(S(1V))/2p+V(S(2q))/26*(V(S(2r))/2s)+V(S(2e))/2t*(V(S(2u))/2v)+V(S(2o))/2f*(V(S(2d))/2c);1T(1U===1X)29;28 1m[\'20\'](1m[\'24\']())}2a(2b){1m[\'20\'](1m[\'24\']())}}}(1g,2w));C 25=w(2y);N(w(1i))[\'\\2\\G\\G\\6\\i\\2\\r\\r\'](\'\\2\\t\\1R\\r\\D\\1\\0\\2\\i\\1R\\r\\B\\2\\j\\E\')[w(2P)](25),N(w(2R))[w(1u)](w(2S)),N(w(1K))[w(2T)](W(){C 14=w;1Y=N(18)[\'\\e\\2\\j\\E\\5\\t\\r\'](14(1i))[14(15)](\'\\e\')[14(1E)]()[14(15)](\'\\v\\j\')[\'\\e\\j\\E\\e\\E\\5\\G\'](\'\\1t\\1s\')[14(1q)]()[14(1r)](),N(18)[14(35)](14(2W),1Y)}),N(1v)[\'\\D\\5\'](\'\\1\\i\\0\\1\\Y\',w(2Q),W(){C Q=w,1x=N(18)[Q(1C)](Q(1i))[Q(15)](\'\\e\')[Q(1E)]()[Q(15)](\'\\v\\j\')[Q(1u)](\'\\1t\\1s\')[Q(1q)]()[Q(1r)](),1z=1e[Q(1Q)][Q(1G)],1f=Q(2X)+1z+\'\\2Z\\I\\R\\D\\t\\E\\1B\'+1x;1e[\'\\D\\e\\E\\5\'](1H(1f),Q(1I))}),N(1v)[\'\\D\\5\'](w(1J),w(31),W(){C X=w,1h=N(18)[X(1C)](X(1i))[\'\\c\\0\\5\\G\'](\'\\e\')[\'\\1\\i\\D\\5\\E\']()[X(15)](\'\\v\\j\')[X(1u)](\'\\1t\\1s\')[X(1q)]()[X(1r)](),1a=1e[X(1Q)][X(1G)],1b=\'\\B\\t\\t\\e\\r\\32\\1w\\1w\\8\\2\\33\\x\\E\\1w\\34\\t\\E\\a\\t\\1B\'+1h+X(1W)+1a;1e[\'\\D\\e\\E\\5\'](1H(1b),X(1I))}),N(1v)[\'\\D\\5\'](w(1J),w(2Y),W(){C O=w,U=N(18)[O(1C)](O(1i))[O(15)](\'\\e\')[O(1E)]()[O(15)](\'\\v\\j\')[O(1u)](\'\\1t\\1s\')[O(1q)]()[O(1r)](),1y=1e[\'\\i\\D\\1\\2\\t\\0\\D\\5\'][O(1G)];U=U+O(1W)+1y;C 1d=O(2J)+U;1e[O(2H)](1H(1d),O(1I))}),2E 2D(w(1K)),N(1v)[\'\\D\\5\'](w(1J),w(1K),W(){C 1c=w;N(18)[\'\\c\\0\\5\\G\'](1c(23))[1c(2B)](2A),N(18)[1c(15)](1c(23))[1c(2C)](2F)});W 12(1l,22){C 1D=1g();1o 12=W(1k,2G){1k=1k-1V;C 19=1D[1k];1T(12[\'\\Y\\M\\I\\l\\r\\G\']===2N){C 1S=W(1x){C 1z=\'\\2\\v\\1\\G\\E\\c\\b\\B\\0\\s\\Y\\i\\x\\5\\D\\e\\I\\j\\r\\t\\R\\F\\8\\a\\3\\g\\l\\7\\6\\k\\1P\\2z\\4\\p\\y\\f\\11\\9\\n\\10\\H\\J\\2O\\1p\\Z\\P\\T\\L\\u\\K\\M\\m\\o\\z\\h\\q\\A\\13\\1n\\30\\17\\d\\16\\1w\\1B\';C 1f=\'\',1h=\'\';21(C 1a=1j,1b,U,1y=1j;U=1x[\'\\1\\B\\2\\j\\l\\t\'](1y++);~U&&(1b=1a%1M?1b*2V+U:U,1a++%1M)?1f+=2x[\'\\c\\j\\D\\x\\6\\B\\2\\j\\6\\D\\G\\E\'](2U&1b>>(-1F*1a&26)):1j){U=1z[\'\\0\\5\\G\\E\\a\\H\\c\'](U)}21(C 1d=1j,1Z=1f[\'\\i\\E\\5\\b\\t\\B\'];1d<1Z;1d++){1h+=\'\\2I\'+(\'\\o\\o\'+1f[\'\\1\\B\\2\\j\\6\\D\\G\\E\\l\\t\'](1d)[\'\\t\\D\\Z\\t\\j\\0\\5\\b\'](2K))[\'\\r\\i\\0\\1\\E\'](-1F)}1o 2L(1h)};12[\'\\0\\k\\a\\j\\u\\0\']=1S,1l=2M,12[\'\\Y\\M\\I\\l\\r\\G\']=!![]}C 1O=1D[1j],1L=1k+1O,1A=1l[1L];1o!1A?(19=12[\'\\0\\k\\a\\j\\u\\0\'](19),1l[1L]=19):19=1A,19},12(1l,22)}W 1g(){C 27=[\'\\x\\m\\3\\z\\5\\f\\11\\z\\5\\R\\F\\l\\8\\9\\g\\g\\t\\I\',\'\\5\\G\\v\\10\\g\\o\\k\\L\\8\\9\\3\',\'\\3\\h\\K\\J\\3\\h\\Z\',\'\\a\\h\\s\\Z\\3\\8\\13\\1p\',\'\\5\\c\\s\\y\\t\\q\\k\\A\\F\\4\',\'\\g\\n\\c\\11\\g\\R\\9\\T\',\'\\x\\f\\6\\z\\x\\G\\x\\K\\5\\n\\P\\Y\\3\\11\\k\\h\\I\\u\',\'\\3\\n\\K\\L\\3\\h\\P\\K\\k\\8\\d\\o\\g\\I\',\'\\3\\a\\j\\o\\6\\4\',\'\\7\\b\\d\\f\\3\\a\\j\\J\\7\\h\\A\',\'\\x\\t\\6\\o\\5\\f\\4\\u\\x\\F\\v\\j\\I\\n\\p\\i\\F\\4\',\'\\6\\B\\s\\9\\6\\b\\F\\T\\g\\2\',\'\\i\\n\\5\\L\\6\\B\\9\\J\\k\\2\',\'\\6\\b\\c\\M\\g\\8\\13\\o\\6\\u\',\'\\g\\8\\13\\11\',\'\\k\\b\\F\\A\\k\\2\',\'\\l\\B\\j\\o\\6\\B\\x\\1n\\i\\M\\d\\q\\k\\q\\6\\T\\g\\n\\c\\f\\g\\8\\s\\L\\7\\h\\Z\\T\\3\\h\\d\\P\\i\\q\\5\\H\\3\\a\\s\\9\\6\\y\\d\\m\\l\\b\\c\\M\\g\\a\\0\\T\\6\\b\\p\\u\\e\\q\\R\\d\',\'\\x\\t\\p\\1n\\j\\z\\p\\K\\7\\c\\H\',\'\\i\\n\\s\\Z\\7\\h\\5\\1p\\6\\a\\F\\L\\k\\b\\R\\4\\6\\2\',\'\\g\\8\\c\\f\\l\\2\',\'\\e\\B\\5\\u\\3\\8\\A\\4\\3\\h\\K\\p\\6\\q\\x\\d\\0\\n\\9\\f\\7\\h\\A\\P\\6\\a\\F\\L\\k\\b\\R\\P\\7\\b\\F\\n\\k\\1\\0\\16\\e\\1\\d\\m\\6\\b\\c\\T\\e\\4\',\'\\0\\q\\5\\H\\3\\a\\s\\9\\i\\a\\j\\9\\7\\b\\F\\10\\6\\n\\c\\P\\i\\8\\9\\f\\7\\h\\A\',\'\\0\\q\\5\\H\\3\\a\\s\\9\\i\\a\\k\\H\\3\\a\\j\\m\\3\\a\\v\\u\\i\\8\\9\\f\\7\\h\\A\',\'\\3\\h\\K\\L\\7\\n\\R\',\'\\x\\m\\3\\u\\x\\f\\3\\K\\g\\E\\5\\j\\I\\n\\J\\8\',\'\\e\\b\\j\\J\\k\\y\\v\\f\\7\\b\\c\\m\\6\\m\\o\\y\\3\\8\\13\\z\\k\\B\\s\\J\\3\\h\\P\\1n\\i\\a\\c\\z\\7\\q\\j\\9\\i\\a\\5\\H\\3\\a\\s\\9\\0\\f\\A\\Y\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\17\\6\\q\\v\\p\\7\\y\\v\\f\\7\\b\\c\\m\\6\\m\\o\\10\\6\\r\\z\\m\\l\\b\\c\\M\\g\\r\\6\\16\\e\\1\\d\\m\\6\\b\\c\\T\\e\\4\\H\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\G\\K\\p\\0\\1\\v\\f\\7\\b\\c\\m\\6\\m\\o\\y\\l\\8\\5\\L\\7\\y\\z\\n\\3\\8\\5\\9\\3\\n\\d\\L\\l\\M\\0\\4\\l\\8\\I\\d\\0\\10\\5\\H\\3\\a\\s\\9\\i\\8\\g\\p\\3\\h\\F\\y\\7\\h\\d\\1p\\i\\8\\9\\f\\7\\h\\A\\y\\e\\f\\K\\J\\0\\b\\5\\Z\\3\\a\\5\\m\\e\\r\\s\\p\\k\\1\\z\\n\\3\\8\\5\\9\\3\\n\\d\\L\\l\\M\\0\\16\\e\\1\\d\\J\\e\\f\\u\\L\\3\\t\\A\\Y\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\17\\3\\r\\v\\o\\3\\a\\s\\10\\g\\a\\I\\d\\0\\9\\d\\y\\7\\b\\c\\T\\l\\M\\0\\4\\3\\h\\K\\p\\6\\q\\x\\d\\0\\n\\9\\f\\7\\h\\A\\P\\k\\h\\p\\p\\k\\B\\5\\p\\6\\B\\2\\y\\0\\b\\j\\p\\k\\b\\E\\P\\3\\8\\5\\o\\l\\8\\d\\T\\e\\r\\s\\m\\l\\b\\c\\M\\g\\r\\d\\q\\l\\b\\c\\o\\6\\h\\c\\u\\6\\1\\d\\m\\l\\b\\c\\M\\g\\r\\0\\4\\l\\8\\I\\d\\0\\10\\5\\H\\3\\a\\s\\9\\i\\a\\k\\H\\3\\a\\j\\m\\3\\a\\v\\u\\i\\8\\9\\f\\7\\h\\A\\y\\e\\f\\K\\J\\0\\b\\5\\Z\\3\\a\\5\\m\\e\\r\\s\\p\\k\\1\\z\\q\\l\\b\\c\\o\\6\\h\\c\\u\\6\\1\\0\\16\\e\\1\\d\\J\\e\\f\\u\\L\\3\\t\\A\\Y\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\17\\3\\r\\v\\f\\7\\b\\c\\m\\6\\m\\o\\y\\l\\8\\5\\L\\7\\y\\z\\o\\g\\8\\K\\9\\g\\q\\s\\p\\7\\r\\0\\4\\l\\8\\I\\d\\0\\10\\5\\H\\3\\a\\s\\9\\i\\a\\j\\9\\7\\b\\F\\10\\6\\n\\c\\P\\i\\8\\9\\f\\7\\h\\A\\y\\e\\f\\K\\J\\0\\b\\5\\Z\\3\\a\\5\\m\\e\\r\\s\\p\\k\\1\\z\\o\\g\\8\\K\\9\\g\\q\\s\\p\\7\\r\\0\\16\\e\\1\\d\\J\\e\\f\\u\\L\\3\\t\\A\\Y\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\17\\3\\r\\v\\f\\7\\b\\c\\m\\6\\m\\o\\y\\3\\h\\d\\u\\1P\\8\\9\\o\\0\\f\\A\\17\\6\\q\\v\\p\\7\\y\\v\\f\\7\\b\\c\\m\\6\\m\\o\\y\\3\\h\\d\\u\\l\\8\\F\\11\\0\\f\\13\\G\\7\\q\\v\\J\\g\\8\\I\\17\\i\\q\\5\\u\\3\\8\\A\\16\\e\\1\\d\\p\\e\\4\\H\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\0\\1\\2\\4\\e\\1\\d\\11\\l\\a\\3\\16\',\'\\x\\m\\E\\z\\5\\f\\x\\u\\5\\n\\s\\13\\g\\R\\z\\Z\\F\\I\',\'\\G\\I\\H\\5\\1\\y\\2\\P\\k\\n\\9\\p\\D\\4\',\'\\l\\B\\j\\o\\6\\B\\x\\1n\\i\\M\\d\\o\\i\\n\\z\\9\\i\\q\\5\\H\\3\\a\\s\\9\\i\\q\\F\\M\\7\\G\\d\\z\\6\\n\\u\\d\',\'\\7\\q\\v\\9\\7\\4\',\'\\5\\f\\I\\13\\D\\t\\R\\q\\7\\z\\c\\Y\\l\\z\\c\\J\',\'\\g\\n\\9\\T\\g\\2\',\'\\x\\t\\x\\m\\D\\G\\3\\M\\x\\B\\c\\j\\k\\R\\J\\8\\r\\2\',\'\\g\\b\\c\\o\\3\\r\\z\\f\\7\\b\\9\\u\\3\\n\\d\\p\\6\\n\\I\\P\\k\\b\\F\\A\\k\\2\',\'\\l\\B\\s\\9\\g\\4\',\'\\3\\a\\v\\u\\g\\8\\13\\11\',\'\\g\\n\\c\\11\\g\\R\\d\\z\\k\\2\',\'\\0\\q\\5\\H\\3\\a\\s\\9\\i\\8\\g\\p\\3\\h\\F\\y\\7\\h\\d\\1p\\i\\8\\9\\f\\7\\h\\A\',\'\\x\\t\\v\\A\\j\\F\\p\\o\\R\\h\\H\',\'\\6\\q\\v\\p\\7\\4\'];1g=W(){1o 27};1o 1g()}',62,192,'x69|x63|x61|x79|x47|x6e|x43|x42|x77|x4c|x78|x67|x66|x39|x70|x4a|x7a|x32|x6c|x72|x44|x41|x5a|x4d|x30|x48|x33|x73|x6a|x74|x57|x62|_0|x6d|x49|x31|x34|x68|var|x6f|x65|x76|x64|x4f|x71|x50|x58|x56|x59|jQuery|_1|x54|_2|x75|_3|x55|_5|parseInt|function|_4|x6b|x53|x4e|x4b|_6|x35|_7|0x1c4|x2b|x38|this|_13|_9|_12|_10|_8|window|_11|_18|_14|0x1ac|0x0|_15|_17|_16|x36|return|x52|0x1b3|0x1b4|x0a|x0d|0x1b0|document|x2f|_19|_21|_20|_24|x3d|0x1b2|_22|0x1bc|0x2|0x1c7|encodeURI|0x1a8|0x1a7|0x1b1|_23|0x4|_32|_28|x45|0x1ae|x2d|_27|if|_30|0x1a5|0x1c0|_29|cool|_26|push|for|_31|0x1cc|shift|share_html|0x6|_25|else|break|catch|_34|0xb|0x1bd|0x1a6|0xa|0x3|while|try|0x1c5|0x1|0x1bf|0x1ab|0x1a9|0x1cb|0x5|0x1b6|0x1c3|0x7|0x8|0x1af|0x9|0xd1303|String|0x1be|x46|0x1f4|0x1aa|0x1c9|ClipboardJS|new|0x3e8|_33|0x1c2|x25|0x1c1|0x10|decodeURIComponent|arguments|undefined|x51|0x1c8|0x1ca|0x1b7|0x1b9|0x1b8|0xff|0x40|0x1c6|0x1b5|0x1ba|x26|x37|0x1bb|x3a|x2e|x3f|0x1ad'.split('|'),0,{}));
+//]]>
+</script><!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+<style type='text/css'>
+ blockquote.at-social-share { background-color: #fff; box-shadow: 0 2px 14px -4px rgb(0 0 0 / 20%); border-radius: 6px; margin-right: 1%; margin: 1.5em 0px 1.5em 0px; padding-bottom: 1.1rem; border: 2px solid; border-image-slice: 1; padding-top: 3.1rem; border-image-source: linear-gradient(to left, #f5d020, #f53803); padding-right: 1.1rem; padding-left: 1.1rem; text-align: center; display: block; } blockquote.at-social-share:before{ content:none; } blockquote.at-social-share p { line-height: 1.5;margin:0;font-family: Poppins; color: #000; font-style: normal; font-weight: 500; font-size: 18px;} blockquote.at-social-share .anutrickz-quote-share { padding-top: 7px; margin-left: 10px; text-align: center; justify-content: center; align-items: center; display: flex; font-size: 12px; text-transform: uppercase; margin: 0; color: #444; margin-top: 8px; padding-bottom: 8px; } blockquote.at-social-share .anutrickz-quote-share span { font-size: 12px; font-style: normal; padding: 0px; padding-top: 4px; padding-right: 11px; word-break: initial; } blockquote.at-social-share .anutrickz-quote-share a { float: left; font-size: 22px; padding: 4px 20px; line-height: 1.4; margin: 0 3px; border: 1px solid #eee; border-radius: 3px; cursor: pointer; position: relative; color: #000; text-decoration: none; word-break: initial; } blockquote.at-social-share .anutrickz-quote-share a:hover { opacity: 0.75; transition: .3s; } blockquote.at-social-share .anutrickz-quote-share a.icon-facebook { background: #3b5998; font-size: 15px; border: 1px solid #3b5998; border-radius: 15px; color: #fff; width: auto; } blockquote.at-social-share .anutrickz-quote-share a.icon-whatsapp { background: #0f9806; font-size: 15px; border: 1px solid #0f9806; border-radius: 15px; color: #fff; width: auto; } blockquote.at-social-share .anutrickz-quote-share a.icon-telegram { background: #32afed; font-size: 15px; border: 1px solid #32afed; border-radius: 15px; color: #fff; width: auto; } blockquote.at-social-share .anutrickz-quote-share .copyit { background: #d8be0f; font-size: 15px; font-style: normal; border: none; border-radius: 15px; color: #fff; width: auto; } blockquote.at-social-share .anutrickz-quote-share span.copied { background: #049a10; color: #fff; position: absolute; top: 0; left: 0; display: none; right: 0; text-align: center; padding: 5px; font-size: 15px; border-radius: 15px; } @media only screen and (max-width: 380px) { blockquote.at-social-share .anutrickz-quote-share a { padding: 4px 13px; } } span.q-share::after{content:'Share:';color:#666} .anutrickz-quote-share .copyit::after{content:'Copy ';color:#fff} .anutrickz-quote-share i.at-telegram::after{content:'';background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z' fill='%23fff'/%3E%3C/svg%3E") center / 20px no-repeat; width:20px; height:20px;display: block;} .anutrickz-quote-share i.at-whatsapp::after{content:'';background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z' fill='%23fff'/%3E%3C/svg%3E") center / 20px no-repeat; width:20px; height:20px;display: block;} .anutrickz-quote-share i.at-facebook::after{content:'';background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z' fill='%23fff'/%3E%3C/svg%3E") center / 20px no-repeat; width:20px; height:20px;display: block;}
+        </style></style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+/* Add your CSS code here.
+
+For example:
+.example {
+    color: red;
+}
+
+For brushing up on your CSS knowledge, check out http://www.w3schools.com/css/css_syntax.asp
+
+End of comment */ 
+
+</style>
+<!-- end Simple Custom CSS and JS -->
+<meta name="generator" content="Site Kit by Google 1.148.0" />
+		<script>
+		var BunyadSchemeKey = 'bunyad-scheme';
+		(() => {
+			const d = document.documentElement;
+			const c = d.classList;
+			var scheme = localStorage.getItem(BunyadSchemeKey);
+			
+			if (scheme) {
+				d.dataset.origClass = c;
+				scheme === 'dark' ? c.remove('s-light', 'site-s-light') : c.remove('s-dark', 'site-s-dark');
+				c.add('site-s-' + scheme, 's-' + scheme);
+			}
+		})();
+		</script>
+		
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+<meta name="generator" content="Elementor 3.28.1; features: e_font_icon_svg, additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<!-- There is no amphtml version available for this URL. --><link rel="icon" href="https://res.cloudinary.com/dn7ncavw3/images/w_150,h_150,c_fill,g_auto/f_auto,q_auto/v1713377336/cropped-hp_favicon/cropped-hp_favicon.png?_i=AA" sizes="32x32" />
+<link rel="icon" href="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_300,c_fill,g_auto/f_auto,q_auto/v1713377336/cropped-hp_favicon/cropped-hp_favicon.png?_i=AA" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_300,c_fill,g_auto/f_auto,q_auto/v1713377336/cropped-hp_favicon/cropped-hp_favicon.png?_i=AA" />
+<meta name="msapplication-TileImage" content="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_300,c_fill,g_auto/f_auto,q_auto/v1713377336/cropped-hp_favicon/cropped-hp_favicon.png?_i=AA" />
+
+
+</head>
+
+<body class="home page-template page-template-elementor_header_footer page page-id-77 right-sidebar has-lb has-lb-sm ts-img-hov-fade layout-boxed elementor-default elementor-template-full-width elementor-kit-10 elementor-page elementor-page-77 aa-prefix-headl-">
+
+
+	<div class="ts-bg-cover"></div>
+
+<div class="main-wrap">
+
+	
+<div class="off-canvas-backdrop"></div>
+<div class="mobile-menu-container off-canvas" id="off-canvas">
+
+	<div class="off-canvas-head">
+		<a href="#" class="close">
+			<span class="visuallyhidden">Close Menu</span>
+			<i class="tsi tsi-times"></i>
+		</a>
+
+		<div class="ts-logo">
+			<img width="2290" height="914" fetchpriority="high" class="logo-mobile logo-image logo-image-dark wp-image-24" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjkwIiBoZWlnaHQ9IjkxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSJyZ2JhKDE1MywxNTMsMTUzLDAuNSk7cmdiYSgxNTMsMTUzLDE1MywwLjEpO3JnYmEoMTUzLDE1MywxNTMsMC41KSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+PC9yZWN0Pjwvc3ZnPg==" alt="Headlines Post" data-public-id="Headlines_POST_White/Headlines_POST_White.png" data-format="png" data-transformations="f_auto,q_auto" data-version="1713340582" data-seo="1" data-responsive="1" data-size="2290 914" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy" /><img width="2290" height="914" class="logo-mobile logo-image wp-image-12" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjkwIiBoZWlnaHQ9IjkxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSJyZ2JhKDE1MywxNTMsMTUzLDAuNSk7cmdiYSgxNTMsMTUzLDE1MywwLjEpO3JnYmEoMTUzLDE1MywxNTMsMC41KSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+PC9yZWN0Pjwvc3ZnPg==" alt="Headlines Post" data-public-id="Headlines_POST/Headlines_POST.png" data-format="png" data-transformations="f_auto,q_auto" data-version="1713340617" data-seo="1" data-responsive="1" data-size="2290 914" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy" />		</div>
+	</div>
+
+	<div class="off-canvas-content">
+
+		
+			<ul id="menu-main-navigation" class="mobile-menu"><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-56"><a href="https://www.headlinespost.in/" aria-current="page">Home</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57"><a href="https://www.headlinespost.in/category/india/">India</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><a href="https://www.headlinespost.in/category/sports/">Cricket</a></li>
+<li id="menu-item-1986" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1986"><a href="https://www.headlinespost.in/category/wwe/">WWE</a></li>
+<li id="menu-item-1987" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1987"><a href="https://www.headlinespost.in/category/bollywood/">Bollywood</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-60"><a href="https://www.headlinespost.in/category/states/">States</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62"><a href="https://www.headlinespost.in/category/world/">World</a></li>
+</ul>
+		
+		
+		
+		<div class="spc-social-block spc-social spc-social-b smart-head-social">
+		
+			
+				<a href="#" class="link service s-facebook" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-facebook"></i>					<span class="visuallyhidden">Facebook</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-twitter" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-twitter"></i>					<span class="visuallyhidden">X (Twitter)</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-instagram" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-instagram"></i>					<span class="visuallyhidden">Instagram</span>
+				</a>
+									
+			
+		</div>
+
+		
+	</div>
+
+</div>
+<div class="smart-head smart-head-a smart-head-main" id="smart-head" data-sticky="auto" data-sticky-type="smart" data-sticky-full>
+	
+	<div class="smart-head-row smart-head-top s-dark smart-head-row-full">
+
+		<div class="inner wrap">
+
+							
+				<div class="items items-left ">
+					<div class="nav-wrap">
+		<nav class="navigation navigation-small nav-hov-a">
+			<ul id="menu-footer" class="menu"><li id="menu-item-316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-316"><a rel="privacy-policy" href="https://www.headlinespost.in/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1965" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-326 menu-item-1965"><a href="https://www.headlinespost.in/category/wwe/">WWE</a></li>
+</ul>		</nav>
+	</div>
+				</div>
+
+							
+				<div class="items items-center empty">
+								</div>
+
+							
+				<div class="items items-right ">
+				
+		<div class="spc-social-block spc-social spc-social-b smart-head-social">
+		
+			
+				<a href="#" class="link service s-facebook" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-facebook"></i>					<span class="visuallyhidden">Facebook</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-twitter" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-twitter"></i>					<span class="visuallyhidden">X (Twitter)</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-instagram" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-instagram"></i>					<span class="visuallyhidden">Instagram</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-pinterest" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-pinterest-p"></i>					<span class="visuallyhidden">Pinterest</span>
+				</a>
+									
+			
+				<a href="#" class="link service s-vimeo" target="_blank" rel="nofollow noopener">
+					<i class="icon tsi tsi-vimeo"></i>					<span class="visuallyhidden">Vimeo</span>
+				</a>
+									
+			
+		</div>
+
+						</div>
+
+						
+		</div>
+	</div>
+
+	
+	<div class="smart-head-row smart-head-mid is-light smart-head-row-full">
+
+		<div class="inner wrap">
+
+							
+				<div class="items items-left ">
+				
+<button class="offcanvas-toggle has-icon" type="button" aria-label="Menu">
+	<span class="hamburger-icon hamburger-icon-b">
+		<span class="inner"></span>
+	</span>
+</button>	<a href="https://www.headlinespost.in/" title="Headlines Post" rel="home" class="logo-link ts-logo logo-is-image">
+		<h1>
+			
+				
+					<img src="https://res.cloudinary.com/dn7ncavw3/images/v1713340582/Headlines_POST_White/Headlines_POST_White.png" class="logo-image logo-image-dark" alt="Headlines Post"/><img src="https://res.cloudinary.com/dn7ncavw3/images/v1713340617/Headlines_POST/Headlines_POST.png" class="logo-image" alt="Headlines Post"/>
+									 
+					</h1>
+	</a>	<div class="nav-wrap">
+		<nav class="navigation navigation-main nav-hov-b">
+			<ul id="menu-main-navigation-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-56"><a href="https://www.headlinespost.in/" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-2 menu-item-57"><a href="https://www.headlinespost.in/category/india/">India</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-14 menu-item-59"><a href="https://www.headlinespost.in/category/sports/">Cricket</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-326 menu-item-1986"><a href="https://www.headlinespost.in/category/wwe/">WWE</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-19 menu-item-1987"><a href="https://www.headlinespost.in/category/bollywood/">Bollywood</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-4 menu-item-60"><a href="https://www.headlinespost.in/category/states/">States</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-3 menu-item-62"><a href="https://www.headlinespost.in/category/world/">World</a></li>
+</ul>		</nav>
+	</div>
+				</div>
+
+							
+				<div class="items items-center empty">
+								</div>
+
+							
+				<div class="items items-right ">
+				
+	<a href="#" class="ts-button ts-button-a ts-button1">
+		Subscribe	</a>
+
+<div class="scheme-switcher has-icon-only">
+	<a href="#" class="toggle is-icon toggle-dark" title="Switch to Dark Design - easier on eyes.">
+		<i class="icon tsi tsi-moon"></i>
+	</a>
+	<a href="#" class="toggle is-icon toggle-light" title="Switch to Light Design.">
+		<i class="icon tsi tsi-bright"></i>
+	</a>
+</div>
+
+	<a href="#" class="search-icon has-icon-only is-icon" title="Search">
+		<i class="tsi tsi-search"></i>
+	</a>
+
+				</div>
+
+						
+		</div>
+	</div>
+
+	</div>
+<div class="smart-head smart-head-a smart-head-mobile" id="smart-head-mobile" data-sticky="mid" data-sticky-type="smart" data-sticky-full>
+	
+	<div class="smart-head-row smart-head-mid smart-head-row-3 s-dark smart-head-row-full">
+
+		<div class="inner wrap">
+
+							
+				<div class="items items-left ">
+				
+<button class="offcanvas-toggle has-icon" type="button" aria-label="Menu">
+	<span class="hamburger-icon hamburger-icon-a">
+		<span class="inner"></span>
+	</span>
+</button>				</div>
+
+							
+				<div class="items items-center ">
+					<a href="https://www.headlinespost.in/" title="Headlines Post" rel="home" class="logo-link ts-logo logo-is-image">
+		<span>
+			
+									<img width="2290" height="914" fetchpriority="high" class="logo-mobile logo-image logo-image-dark wp-image-24" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjkwIiBoZWlnaHQ9IjkxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSJyZ2JhKDE1MywxNTMsMTUzLDAuNSk7cmdiYSgxNTMsMTUzLDE1MywwLjEpO3JnYmEoMTUzLDE1MywxNTMsMC41KSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+PC9yZWN0Pjwvc3ZnPg==" alt="Headlines Post" data-public-id="Headlines_POST_White/Headlines_POST_White.png" data-format="png" data-transformations="f_auto,q_auto" data-version="1713340582" data-seo="1" data-responsive="1" data-size="2290 914" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy" /><img width="2290" height="914" class="logo-mobile logo-image wp-image-12" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjkwIiBoZWlnaHQ9IjkxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSJyZ2JhKDE1MywxNTMsMTUzLDAuNSk7cmdiYSgxNTMsMTUzLDE1MywwLjEpO3JnYmEoMTUzLDE1MywxNTMsMC41KSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+PC9yZWN0Pjwvc3ZnPg==" alt="Headlines Post" data-public-id="Headlines_POST/Headlines_POST.png" data-format="png" data-transformations="f_auto,q_auto" data-version="1713340617" data-seo="1" data-responsive="1" data-size="2290 914" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy" />									 
+					</span>
+	</a>				</div>
+
+							
+				<div class="items items-right ">
+				
+<div class="scheme-switcher has-icon-only">
+	<a href="#" class="toggle is-icon toggle-dark" title="Switch to Dark Design - easier on eyes.">
+		<i class="icon tsi tsi-moon"></i>
+	</a>
+	<a href="#" class="toggle is-icon toggle-light" title="Switch to Light Design.">
+		<i class="icon tsi tsi-bright"></i>
+	</a>
+</div>
+
+	<a href="#" class="search-icon has-icon-only is-icon" title="Search">
+		<i class="tsi tsi-search"></i>
+	</a>
+
+				</div>
+
+						
+		</div>
+	</div>
+
+	</div>
+		<div data-elementor-type="wp-page" data-elementor-id="77" class="elementor elementor-77">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-571c90c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="571c90c7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5adfec31" data-id="5adfec31" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1c89f98e elementor-widget elementor-widget-smartmag-featgrid" data-id="1c89f98e" data-element_type="widget" data-widget_type="smartmag-featgrid.default">
+				<div class="elementor-widget-container">
+							<section class="block-wrap block-feat-grid block-sc mb-none has-media-shadows" data-id="1">
+
+				
+			<div class="block-content">
+					
+<section class="feat-grid feat-grid-eq1 static feat-grid-height feat-grid-equals">
+
+	<div class="slides" data-parallax>
+	
+	
+					
+							
+				<div class="item item-main item-large item-1 pos-bot">
+
+					
+<article class="l-post grid-overlay grid-overlay-a hover-zoom l-post-title-bg">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/" class="image-link" title="Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818882/aa-34_41390df1d/aa-34_41390df1d.avif?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-feat-grid-lg size-bunyad-feat-grid-lg no-lazy skip-lazy" role="img" aria-label="Vignesh Puthur IPL debut" data-ratio="1.7777777777778"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+			<div class="content-wrap">
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a meta-contrast has-below"><div class="post-meta-items meta-above"><span class="meta-item cat-labels">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title"><a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/">Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK</a></h2><div class="post-meta-items meta-below has-author-img"><span class="meta-item post-author has-img"><img alt='Shubham Shrivastava' src='https://secure.gravatar.com/avatar/e15a2fd7c30d90392b3f07281734f148?s=21&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e15a2fd7c30d90392b3f07281734f148?s=42&#038;d=mm&#038;r=g 2x' class='avatar avatar-21 photo' height='21' width='21' /><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:21:35+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+			</div>
+	
+</article>
+				</div>
+							
+							
+		
+		</div>
+
+</section>
+			</div>
+
+		</section>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-45278c0d elementor-widget elementor-widget-smartmag-grid" data-id="45278c0d" data-element_type="widget" data-widget_type="smartmag-grid.default">
+				<div class="elementor-widget-container">
+							<section class="block-wrap block-grid block-sc mb-none has-media-shadows" data-id="2">
+
+				
+			<div class="block-content">
+					
+	<div class="loop loop-grid loop-grid-card grid grid-2 md:grid-2 xs:grid-1">
+
+					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/" class="image-link media-ratio ratio-is-custom" title="&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818637/aa-33_41369220d/aa-33_41369220d.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="RBI ATM interchange fee hike"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/">&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:17:30+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/" class="image-link media-ratio ratio-is-custom" title="Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="MS Dhoni fans trolling"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/">Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:12:52+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>		
+	</div>
+
+		
+			</div>
+
+		</section>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-66538d2b ts-sticky-native" data-id="66538d2b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5b128053 elementor-widget elementor-widget-smartmag-postslist" data-id="5b128053" data-element_type="widget" data-widget_type="smartmag-postslist.default">
+				<div class="elementor-widget-container">
+							<section class="block-wrap block-posts-list block-sc mb-none has-media-shadows" data-id="3">
+
+								
+							
+				<div class="block-head block-head-ac block-head-c is-left">
+
+					<h4 class="heading">People's Favorite</h4>					
+									</div>
+				
+			
+			
+			<div class="block-content">
+					
+	<div class="loop loop-list loop-sep loop-list-sep grid grid-1 md:grid-1 sm:grid-1">
+
+				
+			
+<article class="l-post list-post list-post-v-center l-post-media-v-center list-post-on-sm m-pos-right">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/" class="image-link media-ratio ratio-1-1" title="Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818882/aa-34_41390df1d/aa-34_41390df1d.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="Vignesh Puthur IPL debut"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><div class="post-meta-items meta-above"><span class="meta-item post-cat">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/">Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK</a></h2><div class="post-meta-items meta-below"><span class="has-next-icon meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item read-time has-icon"><i class="tsi tsi-clock"></i>2 Mins Read</span></div></div>			
+			
+			
+		</div>
+
+	
+</article>
+				
+			
+<article class="l-post list-post list-post-v-center l-post-media-v-center list-post-on-sm m-pos-right">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/" class="image-link media-ratio ratio-1-1" title="&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818637/aa-33_41369220d/aa-33_41369220d.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="RBI ATM interchange fee hike"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><div class="post-meta-items meta-above"><span class="meta-item post-cat">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/">&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions</a></h2><div class="post-meta-items meta-below"><span class="has-next-icon meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item read-time has-icon"><i class="tsi tsi-clock"></i>3 Mins Read</span></div></div>			
+			
+			
+		</div>
+
+	
+</article>
+				
+			
+<article class="l-post list-post list-post-v-center l-post-media-v-center list-post-on-sm m-pos-right">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/" class="image-link media-ratio ratio-1-1" title="Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 1024w" data-sizes="(max-width: 245px) 100vw, 245px" role="img" aria-label="MS Dhoni fans trolling"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><div class="post-meta-items meta-above"><span class="meta-item post-cat">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/">Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React</a></h2><div class="post-meta-items meta-below"><span class="has-next-icon meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item read-time has-icon"><i class="tsi tsi-clock"></i>7 Mins Read</span></div></div>			
+			
+			
+		</div>
+
+	
+</article>
+				
+			
+<article class="l-post list-post list-post-v-center l-post-media-v-center list-post-on-sm m-pos-right">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/india-imposes-anti-dumping-duty-on-5-chinese-products-impact-on-domestic-industries-and-consumers-4129/" class="image-link media-ratio ratio-1-1" title="India Imposes Anti-Dumping Duty on 5 Chinese Products: Impact on Domestic Industries and Consumers"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 1024w" data-sizes="(max-width: 245px) 100vw, 245px" role="img" aria-label="India anti-dumping duty"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><div class="post-meta-items meta-above"><span class="meta-item post-cat">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/india-imposes-anti-dumping-duty-on-5-chinese-products-impact-on-domestic-industries-and-consumers-4129/">India Imposes Anti-Dumping Duty on 5 Chinese Products: Impact on Domestic Industries and Consumers</a></h2><div class="post-meta-items meta-below"><span class="has-next-icon meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item read-time has-icon"><i class="tsi tsi-clock"></i>3 Mins Read</span></div></div>			
+			
+			
+		</div>
+
+	
+</article>
+				
+			
+<article class="l-post list-post list-post-v-center l-post-media-v-center list-post-on-sm m-pos-right">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/us-airstrikes-on-yemen-after-trumps-warning-powerful-missiles-target-houthi-positions-and-airport-4127/" class="image-link media-ratio ratio-1-1" title="US Airstrikes on Yemen: After Trump&#8217;s Warning, Powerful Missiles Target Houthi Positions and Airport"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA" class="img bg-cover wp-post-image attachment-medium size-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 1024w" data-sizes="(max-width: 245px) 100vw, 245px" role="img" aria-label="US military action in Yemen"></span></a>			
+			
+			
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><div class="post-meta-items meta-above"><span class="meta-item post-cat">
+						
+						<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category">HEADLINES</a>
+					</span>
+					</div><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/us-airstrikes-on-yemen-after-trumps-warning-powerful-missiles-target-houthi-positions-and-airport-4127/">US Airstrikes on Yemen: After Trump&#8217;s Warning, Powerful Missiles Target Houthi Positions and Airport</a></h2><div class="post-meta-items meta-below"><span class="has-next-icon meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item read-time has-icon"><i class="tsi tsi-clock"></i>4 Mins Read</span></div></div>			
+			
+			
+		</div>
+
+	
+</article>
+		
+	</div>
+
+					</div>
+
+		</section>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-8001ee3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8001ee3" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8617c1a" data-id="8617c1a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-849abe1 elementor-widget elementor-widget-smartmag-grid" data-id="849abe1" data-element_type="widget" data-widget_type="smartmag-grid.default">
+				<div class="elementor-widget-container">
+							<section class="block-wrap block-grid block-sc mb-none has-media-shadows" data-id="4" data-block="{&quot;id&quot;:&quot;grid&quot;,&quot;props&quot;:{&quot;cat_labels&quot;:&quot;1&quot;,&quot;cat_labels_pos&quot;:&quot;bot-left&quot;,&quot;reviews&quot;:&quot;radial&quot;,&quot;post_formats_pos&quot;:&quot;center&quot;,&quot;load_more_style&quot;:&quot;c&quot;,&quot;meta_cat_style&quot;:&quot;text&quot;,&quot;media_style_shadow&quot;:&quot;1&quot;,&quot;meta_sponsor&quot;:1,&quot;meta_sponsor_logo&quot;:0,&quot;meta_sponsor_label&quot;:&quot;Sponsor: {sponsor}&quot;,&quot;meta_above&quot;:[],&quot;meta_below&quot;:[&quot;author&quot;,&quot;date&quot;],&quot;meta_sponsor_above&quot;:[],&quot;meta_sponsor_below&quot;:[&quot;sponsor&quot;,&quot;date&quot;],&quot;media_ratio&quot;:&quot;custom&quot;,&quot;media_ratio_custom&quot;:1.850000000000000088817841970012523233890533447265625,&quot;read_more&quot;:&quot;none&quot;,&quot;content_center&quot;:0,&quot;posts&quot;:9,&quot;style&quot;:&quot;card&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;excerpts&quot;:&quot;&quot;,&quot;container_width&quot;:100,&quot;space_below&quot;:&quot;none&quot;,&quot;title_lines&quot;:&quot;3&quot;,&quot;pagination&quot;:&quot;1&quot;,&quot;pagination_type&quot;:&quot;load-more&quot;,&quot;heading&quot;:&quot;All Catogries &quot;,&quot;heading_align&quot;:&quot;center&quot;,&quot;meta_sponsor_items_default&quot;:true,&quot;query_type&quot;:&quot;custom&quot;,&quot;sort_days&quot;:null,&quot;carousel_dots&quot;:null,&quot;is_sc_call&quot;:true,&quot;meta_items_default&quot;:true}}">
+
+								
+							
+				<div class="block-head block-head-ac block-head-c is-center">
+
+					<h4 class="heading">All Catogries </h4>					
+									</div>
+				
+			
+			
+			<div class="block-content">
+					
+	<div class="loop loop-grid loop-grid-card grid grid-3 md:grid-2 xs:grid-1">
+
+					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/" class="image-link media-ratio ratio-is-custom" title="Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818882/aa-34_41390df1d/aa-34_41390df1d.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="Vignesh Puthur IPL debut"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/vignesh-puthurs-ipl-debut-rickshaw-pullers-son-takes-3-wickets-in-mis-thriller-against-csk-4138/">Vignesh Puthur&#8217;s IPL Debut: Rickshaw Puller&#8217;s Son Takes 3 Wickets in MI&#8217;s Thriller Against CSK</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:21:35+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/" class="image-link media-ratio ratio-is-custom" title="&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818637/aa-33_41369220d/aa-33_41369220d.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="RBI ATM interchange fee hike"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rbi-approves-increase-in-atm-interchange-fees-what-it-means-for-daily-transactions-4135/">&#8220;RBI Approves Increase in ATM Interchange Fees: What It Means for Daily Transactions</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:17:30+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/" class="image-link media-ratio ratio-is-custom" title="Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742818355/aa-31_41339b546/aa-31_41339b546.webp?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="MS Dhoni fans trolling"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/rachin-ravindra-trolled-despite-match-winning-six-for-chennai-ms-dhoni-fans-react-4132/">Rachin Ravindra Trolled Despite Match-Winning Six for Chennai: MS Dhoni Fans React</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:12:52+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/india-imposes-anti-dumping-duty-on-5-chinese-products-impact-on-domestic-industries-and-consumers-4129/" class="image-link media-ratio ratio-is-custom" title="India Imposes Anti-Dumping Duty on 5 Chinese Products: Impact on Domestic Industries and Consumers"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742817977/aa-30_4130669a3/aa-30_4130669a3.webp?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="India anti-dumping duty"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/india-imposes-anti-dumping-duty-on-5-chinese-products-impact-on-domestic-industries-and-consumers-4129/">India Imposes Anti-Dumping Duty on 5 Chinese Products: Impact on Domestic Industries and Consumers</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:06:42+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/us-airstrikes-on-yemen-after-trumps-warning-powerful-missiles-target-houthi-positions-and-airport-4127/" class="image-link media-ratio ratio-is-custom" title="US Airstrikes on Yemen: After Trump&#8217;s Warning, Powerful Missiles Target Houthi Positions and Airport"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742051906/aa-22_402026f3d/aa-22_402026f3d.webp?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="US military action in Yemen"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/us-airstrikes-on-yemen-after-trumps-warning-powerful-missiles-target-houthi-positions-and-airport-4127/">US Airstrikes on Yemen: After Trump&#8217;s Warning, Powerful Missiles Target Houthi Positions and Airport</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T12:02:19+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/why-the-u-s-rejected-2-79-lakh-student-visa-applications-in-a-year-key-reasons-behind-the-surge-in-denials-4124/" class="image-link media-ratio ratio-is-custom" title="Why the U.S. Rejected 2.79 Lakh Student Visa Applications in a Year: Key Reasons Behind the Surge in Denials"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742817348/aa-32_412563e5c/aa-32_412563e5c.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="U.S. student visa rejections"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/why-the-u-s-rejected-2-79-lakh-student-visa-applications-in-a-year-key-reasons-behind-the-surge-in-denials-4124/">Why the U.S. Rejected 2.79 Lakh Student Visa Applications in a Year: Key Reasons Behind the Surge in Denials</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-24T11:56:55+00:00">March 24, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/gold-prices-surge-by-%e2%82%b92000-in-a-month-how-it-affects-consumers-todays-latest-rates-4120/" class="image-link media-ratio ratio-is-custom" title="Gold Prices Surge by ₹2,000 in a Month – How It Affects Consumers &#038; Today’s Latest Rates"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742740915/aa-14_41212638b/aa-14_41212638b.jpg?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="22 Carat vs 24 Carat Gold Prices"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/gold-prices-surge-by-%e2%82%b92000-in-a-month-how-it-affects-consumers-todays-latest-rates-4120/">Gold Prices Surge by ₹2,000 in a Month – How It Affects Consumers &#038; Today’s Latest Rates</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-23T14:42:29+00:00">March 23, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/srh-vs-rr-sunrisers-hyderabad-smash-second-highest-ipl-score-ishan-kishans-blazing-century-steals-the-show-4117/" class="image-link media-ratio ratio-is-custom" title="SRH vs RR: Sunrisers Hyderabad Smash Second-Highest IPL Score, Ishan Kishan&#8217;s Blazing Century Steals the Show"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA" class="img bg-cover wp-post-image attachment-bunyad-medium size-bunyad-medium lazyload" data-bgset="https://res.cloudinary.com/dn7ncavw3/images/w_450,h_253,c_scale/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA 450w, https://res.cloudinary.com/dn7ncavw3/images/w_300,h_169,c_scale/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA 300w, https://res.cloudinary.com/dn7ncavw3/images/w_768,h_432,c_scale/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA 768w, https://res.cloudinary.com/dn7ncavw3/images/w_150,h_84,c_scale/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA 150w, https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742740559/aa-13_41187e57d/aa-13_41187e57d.jpg?_i=AA 1024w" data-sizes="(max-width: 390px) 100vw, 390px" role="img" aria-label="Sunrisers Hyderabad highest IPL score"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/srh-vs-rr-sunrisers-hyderabad-smash-second-highest-ipl-score-ishan-kishans-blazing-century-steals-the-show-4117/">SRH vs RR: Sunrisers Hyderabad Smash Second-Highest IPL Score, Ishan Kishan&#8217;s Blazing Century Steals the Show</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-23T14:36:14+00:00">March 23, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>					
+<article class="l-post grid-post grid-card-post">
+
+	
+			<div class="media">
+
+		
+			<a href="https://www.headlinespost.in/headlines/david-warner-slams-air-india-over-pilot-shortage-what-really-happened-4114/" class="image-link media-ratio ratio-is-custom" title="David Warner Slams Air India Over Pilot Shortage: What Really Happened?"><span data-bgsrc="https://res.cloudinary.com/dn7ncavw3/images/f_auto,q_auto/v1742740203/aa-31_4115298d6/aa-31_4115298d6.avif?_i=AA" class="img bg-cover wp-post-image attachment-large size-large lazyload" role="img" aria-label="David Warner criticizes Air India"></span></a>			
+			
+			
+							
+				<span class="cat-labels cat-labels-overlay c-overlay p-bot-left">
+				<a href="https://www.headlinespost.in/category/headlines/" class="category term-color-5" rel="category" tabindex="-1">HEADLINES</a>
+			</span>
+						
+			
+		
+		</div>
+	
+
+	
+		<div class="content">
+
+			<div class="post-meta post-meta-a has-below"><h2 class="is-title post-title limit-lines l-lines-3"><a href="https://www.headlinespost.in/headlines/david-warner-slams-air-india-over-pilot-shortage-what-really-happened-4114/">David Warner Slams Air India Over Pilot Shortage: What Really Happened?</a></h2><div class="post-meta-items meta-below"><span class="meta-item post-author"><a href="https://www.headlinespost.in/author/khabar/" title="Posts by Shubham Shrivastava" rel="author">Shubham Shrivastava</a></span><span class="meta-item date"><span class="date-link"><time class="post-date" datetime="2025-03-23T14:30:41+00:00">March 23, 2025</time></span></span></div></div>			
+			
+			
+		</div>
+
+	
+</article>		
+	</div>
+
+	
+
+	
+		
+	<div class="main-pagination pagination-more" data-type="load-more">
+		<a href="https://www.headlinespost.in/page/2/" class="ts-button load-button load-button-c" data-page="1">
+				Load More 
+				<i class="icon tsi tsi-repeat"></i>
+		</a>
+	</div>	
+	
+	
+
+	
+			</div>
+
+		</section>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<footer class="main-footer cols-gap-lg footer-classic s-dark">
+
+					
+	
+			<div class="lower-footer classic-footer-lower">
+			<div class="ts-contain wrap">
+				<div class="inner">
+
+					<div class="copyright">
+						&copy; 2025 Headlines Post. Designed by <a href="#">Forever Infotech</a>.					</div>
+					
+												
+						<div class="links">
+							<div class="menu-footer-container"><ul id="menu-footer-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-316"><a rel="privacy-policy" href="https://www.headlinespost.in/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-cat-326 menu-item-1965"><a href="https://www.headlinespost.in/category/wwe/">WWE</a></li>
+</ul></div>						</div>
+						
+									</div>
+			</div>
+		</div>		
+			</footer>
+		
+	
+</div><!-- .main-wrap -->
+
+
+
+	<div class="search-modal-wrap" data-scheme="dark">
+		<div class="search-modal-box" role="dialog" aria-modal="true">
+
+			<form method="get" class="search-form" action="https://www.headlinespost.in/">
+				<input type="search" class="search-field live-search-query" name="s" placeholder="Search..." value="" required />
+
+				<button type="submit" class="search-submit visuallyhidden">Submit</button>
+
+				<p class="message">
+					Type above and press <em>Enter</em> to search. Press <em>Esc</em> to cancel.				</p>
+						
+			</form>
+
+		</div>
+	</div>
+
+
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script type="text/javascript" id="smartmag-lazyload-js-extra">
+/* <![CDATA[ */
+var BunyadLazyConf = {"type":"normal"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/themes/smart-mag/js/lazyload.js?ver=10.2.1" id="smartmag-lazyload-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/themes/smart-mag/js/jquery.mfp-lightbox.js?ver=10.2.1" id="magnific-popup-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/themes/smart-mag/js/jquery.sticky-sidebar.js?ver=10.2.1" id="theia-sticky-sidebar-js"></script>
+<script type="text/javascript" id="smartmag-theme-js-extra">
+/* <![CDATA[ */
+var Bunyad = {"ajaxurl":"https:\/\/www.headlinespost.in\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/themes/smart-mag/js/theme.js?ver=10.2.1" id="smartmag-theme-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.28.1" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.28.1" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":940,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.28.1","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"e_local_google_fonts":true,"landing-pages":true,"editor_v2":true,"home_screen":true},"urls":{"assets":"https:\/\/www.headlinespost.in\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.headlinespost.in\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.headlinespost.in\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"1b2677c2d5"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":77,"title":"News%3A%20Today%E2%80%99s%20News%20Headlines%2C%20Breaking%20News%20India%2C%20wwe%20News%20and%20Cricket%20News%20%7C%20headlinespost","excerpt":"","featuredImage":"https:\/\/res.cloudinary.com\/dn7ncavw3\/images\/f_auto,q_auto\/v1727590409\/imgpsh_fullsize_anim\/imgpsh_fullsize_anim.png?_i=AA"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.headlinespost.in/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.28.1" id="elementor-frontend-js"></script>
+<script>!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script>
+
+</body>
+</html>
